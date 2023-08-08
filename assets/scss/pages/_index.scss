@@ -38,8 +38,14 @@
 .fs-20{
   font-size: 20px;
 }
+.fs-32{
+  font-size: 32px;
+}
 .fs-36{
   font-size: 36px;
+}
+.fs-42{
+  font-size: 42px;
 }
 .fs-48{
   font-size: 48px;
@@ -55,6 +61,9 @@
   font-weight: 900;
 }
 
+.w-30{
+  width: 33.33%;
+}
 .w-50{
   width: 49.1879%;
 }
@@ -92,6 +101,10 @@
 .py-16{
   padding-top: 16px;
   padding-bottom: 16px;
+}
+.py-24{
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .py-32{
   padding-top: 32px;
@@ -139,6 +152,9 @@
 .mb-72{
   margin-bottom: 72px;
 }
+.mb-80{
+  margin-bottom: 80px;
+}
 
 //border
 .border-0{
@@ -150,7 +166,19 @@
 .border-top{
   border-top: 1px solid #fff;
 }
-
+.border-bottom{
+  border-bottom: 8px solid ;
+}
+.border-primary{
+  border-color: #AA0601;
+}
+.border-light{
+  outline:1px solid #DCDCDC;;
+}
+.border-light:hover{
+  padding-bottom: 16px;
+  border-bottom: 8px solid #AA0601;
+}
 //flex
 .d-none{
   display: none;
@@ -184,6 +212,9 @@
 }
 .gap-24{
   gap:24px;
+}
+.gap-custom{
+  gap:80px 24px;
 }
 .gap-32{
   gap: 32px;
@@ -220,6 +251,12 @@
   height: 608px;
   background-size: cover;
   background-position:center;
+}
+.brown-1{
+  background: #5F3E2D;
+}
+.brown-2{
+  background: #B75929;
 }
 //component
 
@@ -271,12 +308,26 @@
   align-items: center;
   width: 50%;
 }
-
-//input
-input[type=checkbox]{
-  margin: 0;
+.product-card{
+  width: 23%;
+  &-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-price{
+    font-weight: 700;
+    color:#AA0601;
+  }
+  &-color{
+    display: flex;
+    gap: 8px;
+    li{
+      border-radius: 4px;
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
-
 .custom-card{
   display: flex;
   flex-direction: column;
@@ -286,7 +337,33 @@ input[type=checkbox]{
   box-shadow: 0px 2px 6px #00000029;
   border: 1px solid #DEE2E6;
 }
+//component
+.pagination{
+  width: 400px;
+  display: flex;
+  li{
+    outline: 1px solid #555555;
+  }
+  a{
+    color:#555555;
+    font-size: 18px;
+    padding: 12px 16px;
+    &:hover{
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+//input
+input[type=checkbox]{
+  margin: 0;
+}
+
+
 @media  (max-width:992px){
+  .product-card{
+    width: 46%;
+  }
   .glasses-card{
     width: 100%;
   }
@@ -298,6 +375,10 @@ input[type=checkbox]{
   }
   .flex-xl-column{
     flex-direction: column;
+  }
+  .px-xl-0{
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (max-width:768px){
@@ -333,9 +414,17 @@ input[type=checkbox]{
   .w-md-100{
     width: 100%;
   }
+  .px-md-0{
+    padding-left: 0;
+    padding-right: 0;
+  }
   .px-md-96{
     padding-left: 96px;
     padding-right: 96px;
+  }
+  .py-md-16{
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .gap-md-16{
     gap:16px;
@@ -343,6 +432,12 @@ input[type=checkbox]{
   .size-md-40{
     width: 40px;
     height: 40px;
+  }
+  .fs-md-24{
+    font-size: 24px;
+  }
+  .border-light:hover{
+    padding-bottom: 8px;
   }
 }
 @media(max-width:500px){
@@ -421,6 +516,15 @@ input[type=checkbox]{
   }
   .glasses-card{
     width: 100%;
+  }
+  .product-card{
+    width: 92%;
+  }
+  .pagination{
+    a{
+      font-size: 16px;
+      padding: 12px 12px;
+    }
   }
 }
 
